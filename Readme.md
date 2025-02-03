@@ -1,4 +1,5 @@
 **Remotion Video Rendering Project**
+
 This project uses Remotion to programmatically create and render videos using React. It supports dynamic rendering of components via command-line arguments and can be run locally or in a Docker container.
 
 Features
