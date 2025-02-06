@@ -7,12 +7,13 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.255",
+    "@remotion/google-fonts": "^4.0.260",
+    "@remotion/tailwind": "4.0.255",
     "@remotion/zod-types": "4.0.255",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "remotion": "4.0.255",
-    "zod": "3.22.3",
-    "@remotion/tailwind": "4.0.255"
+    "zod": "3.22.3"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.255",

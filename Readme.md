@@ -41,7 +41,7 @@ Render a video:
 Use the render.mjs script to render a video:
 
 
-`node render.mjs --component=HelloWorld --output=hello-world-video --id=HelloWorld
+`node render.mjs --component=MainComposition --output=hello-world-video --id=MainComposition
 `
 The rendered video will be saved to out/hello-world-video.mp4.
 
@@ -49,7 +49,7 @@ Running with Docker
 1. Run the Docker container:
 Use the following command to render a video in a Docker container:
 
-`docker run -v $(pwd)/out:/app/out my-video-renderer --component=HelloWorld --output=hello-world-video --id=HelloWorld
+`docker run -v $(pwd)/out:/app/out my-video-renderer --component=MainComposition --output=hello-world-video --id=MainComposition
 `
 The rendered video will be saved to out/hello-world-video.mp4 on your local machine.
 
@@ -63,7 +63,7 @@ You can customize the component, output file name, and composition ID:
 my-video/
 ├── src/
 │   ├── index.tsx          # Entry point for Remotion
-│   ├── HelloWorld.tsx     # Example component
+│   ├── MainComposition.tsx     # Example component
 │   └── AnotherComponent.tsx # Another example component
 ├── public/                # Static assets (images, audio, etc.)
 ├── out/                   # Rendered videos (created after rendering)
