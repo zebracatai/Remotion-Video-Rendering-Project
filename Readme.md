@@ -29,7 +29,7 @@ Clone the repository:
 
 Build the Docker image (optional):
 
-`docker build -t my-video-renderer .`
+`docker build -t server-side-renderer .`
 
 Usage
 Running Locally
@@ -51,7 +51,7 @@ The rendered video will be saved to out/hello-world-video.mp4.
 Running with Docker
 1. Run the Docker container:
   Use the following command to render a video in a Docker container:
-  `docker run -v $(pwd)/out:/app/out my-video-renderer --component=HelloWorld --output=hello-world-video --id=HelloWorld`
+  `docker run -v $(pwd)/out:/app/out server-side-renderer --component=MainComposition --output=hello-world-video2 --id=MainComposition`
 
   The rendered video will be saved to out/hello-world-video.mp4 on your local machine.
 
