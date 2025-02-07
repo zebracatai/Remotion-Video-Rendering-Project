@@ -20,9 +20,13 @@ const { component, output, id = "HelloWorld" } = args;
     // Step 1: Bundle your Remotion project
     const entry = "./src/index.ts";
     const bundleLocation = await bundle(path.resolve(entry), () => undefined);
-
+    const inputProps = {
+      title: args.title,
+      subtitle: args.subtitle,
+      color: args.color,
+    };
     // Step 2: Get compositions (video templates)
-    const compositions = await getCompositions(bundleLocation);
+    const compositions = await getCompositions(bundleLocation, {inputProps});
 
     const composition = compositions.find((c) => c.id === id);
 
@@ -34,11 +38,7 @@ const { component, output, id = "HelloWorld" } = args;
 
     // Step 3: Render the video with dynamic props
     const outputLocation = `out/${output}.mp4`;
-    const inputProps = {
-      title: "Hello World",
-      subtitle: "custom subtitle",
-      color: "purple",
-    };
+
 
     await renderMedia({
       codec: "h264",
